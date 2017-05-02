@@ -1,0 +1,11 @@
+todo:
+    modify package.json
+    start working with git, learn about what files should i include in the repository -> what to ignore
+    make the app
+    restructure files, delete unnecessary
+    upload to heroku
+        account
+        answer some qs
+            how many app can i make as a free acc
+            if one make it so that different routes lead to different apps
+            structure stuff so that it is possible and reasonable
