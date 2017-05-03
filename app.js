@@ -1,9 +1,6 @@
 var express = require("express"),
     app = express();
 app.use(express.static("./static"));
-app.get("/", function(req, res) {
-    res.sendFile("./static/index.html");
-});
 app.get("/:query", function(req, res) {
     if (req.params.query.match(/^-?\d+$/g)) {
         res.send(createJSON(new Date((Number(req.params.query) * 1000)), true));
