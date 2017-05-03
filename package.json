@@ -1,17 +1,17 @@
 {
-  "name": "timestamp-microservice",
-  "version": "1.0.0",
-  "description": "api practice",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ákos",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.2"
-},
-  "engines": {
-    "node": "6.10.2"
-  }
+    "name": "timestamp-microservice",
+    "version": "1.0.0",
+    "description": "api practice",
+    "main": "app.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Ákos",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.15.2"
+    },
+    "engines": {
+        "node": "6.10.2"
+    }
 }
