@@ -2,10 +2,27 @@ var express = require("express"),
     app = express();
 app.use(express.static("./static"));
 app.get("/:query", function(req, res) {
-    // add one hour for unix cus lul thats why
-    console.log(req.params.query);
-    var date = new Date("2015December15");
-    res.send({"unix": Date.parse(date)/1000.0, "natural": date.toDateString() });
+    if (req.params.query.match(/^-?\d+$/g)) {
+        res.send(createJSON(new Date((Number(req.params.query) * 1000)), true));
+    } else {
+        res.send(createJSON(new Date(req.params.query), false));
+    }
 });
 app.listen(8080);
 console.log("server up");
+function createJSON(date, isItNumber) {
+    if (isNaN(date.getFullYear())) {
+        return ({
+            "unix": null,
+            "natural": null
+        });
+    } else {
+        return ({
+            "unix": isItNumber ? Date.parse(date)/1000.0 : Date.parse(date)/1000.0 + 3600,
+            "natural": date.toLocaleString(
+                "fullwide",
+                {month: "long",
+                day: "numeric"}) + ", " + date.getFullYear()
+            });
+    }
+}
