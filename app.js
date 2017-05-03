@@ -8,7 +8,7 @@ app.get("/:query", function(req, res) {
         res.send(createJSON(new Date(req.params.query), false));
     }
 });
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
 console.log("server up");
 function createJSON(date, isItNumber) {
     if (isNaN(date.getFullYear())) {
