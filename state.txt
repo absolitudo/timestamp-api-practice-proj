@@ -1,9 +1,4 @@
 todo:
-    unix shit
-        -add one hour cus for some reason it doesnt return what it supposed to
-    normal time
-        -format supposed to be:
-            december 15, 2015
     restructure files, delete unnecessary
     upload to heroku
         account
